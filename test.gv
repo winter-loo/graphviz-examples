@@ -1,5 +1,7 @@
 digraph {
+   /* rankdir=LR;*/
+    root = 1;
     node[width=0.5];
     1 -> 2 -> 3 -> 4[label="0.8"];
-    4 -> 1[label="0.6"];
+    4 -> 1[label="0.6", constraint=false];
 }

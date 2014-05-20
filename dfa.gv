@@ -1,0 +1,32 @@
+digraph NFA {
+   rankdir = LR;
+  /* root = 0;*/
+   size="4,4";
+   node [shape = circle];
+   edge [arrowhead = vee];
+   0 [label = "A"];
+   1 [label = "B"];
+   2 [label = "C"];
+   3 [label = "D"];
+   4 [shape = doublecircle, label ="G"]; 
+   5 [label = "F"];
+   6 [shape = doublecircle, label ="E"];  
+   7 [shape = doublecircle, label ="H"];
+/* the value invis causes the node or edge to be undrawn */
+   "" [style = invis, width = 0, height = 0];
+   "" -> 0 [arrowsize = 1.5, penwidth = 0];
+   0 -> 2 [label = "1"];
+   0 -> 1 [label = "0"];
+   1 -> 2 [label = "1"];
+   1 -> 1 [label = "0"];
+   2 -> 6 [label = "1"];
+   2 -> 3 [label = "0"];   
+   3 -> 5 [label = "0"];
+   4 -> 7 [label = "0", constraint = false];
+   5 -> 6 [label = "1"];
+   5 -> 3 [label = "0"];
+   6 -> 6 [label = "1", constraint = false];
+   6 -> 4 [label = "0", constraint = false]; 
+   7 -> 6 [label = "1", constraint = false];
+   7 -> 4 [label = "0", constraint = false];
+}

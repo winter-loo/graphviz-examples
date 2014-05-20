@@ -1,6 +1,7 @@
 digraph G {
     size="4, 4";
-    main [shape=triangle]; /* this is a comment */
+    root=0;
+    main [shape=circle]; /* this is a comment */
     main -> parse [weight=0];
     parse -> execute[label=0.9];
     main -> init [style=dotted];
